@@ -44,10 +44,10 @@ var is_jumping := false
 func get_input() -> Dictionary:
 	return {
 		"x": int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")),
-		#"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
-		"just_jump": Input.is_action_just_pressed("ui_up") == true,
-		"jump": Input.is_action_pressed("ui_up") == true,
-		"released_jump": Input.is_action_just_released("ui_up") == true
+		"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
+		"just_jump": Input.is_action_just_pressed("jump") == true,
+		"jump": Input.is_action_pressed("jump") == true,
+		"released_jump": Input.is_action_just_released("jump") == true
 	}
 
 
