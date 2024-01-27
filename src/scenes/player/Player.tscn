@@ -92,4 +92,5 @@ smoothing_enabled = true
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 3 )
+texture_scale = 0.3
 shadow_enabled = true
