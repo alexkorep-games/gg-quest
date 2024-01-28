@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/levels/base_level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/timed_level.gd" type="Script" id=3]
+
+[node name="TilmedLevel" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="HUD" parent="CanvasLayer" index="1" instance=ExtResource( 2 )]
+unique_name_in_owner = true
+
+[node name="BestTimeLabel" type="Label" parent="." index="8"]
+unique_name_in_owner = true
+margin_left = 1.0
+margin_top = -39.0
+margin_right = 128.0
+margin_bottom = -25.0
+text = "Best time: 000:00.000"
+align = 1
+
+[connection signal="triggered" from="LevelTrigger" to="CanvasLayer/HUD" method="_on_LevelTrigger_triggered"]

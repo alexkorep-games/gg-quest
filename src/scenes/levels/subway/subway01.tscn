@@ -74,4 +74,5 @@ texture_scale = 0.3
 energy = 2.7
 
 [node name="LevelNameLabel" parent="." index="10"]
+text = "Subway 1"
 level_name = "Subway 1"

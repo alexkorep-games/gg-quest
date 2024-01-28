@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "BaseLevel",
+"language": "GDScript",
+"path": "res://scenes/levels/base_level.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scenes/player/Player.gd"
 } ]
 _global_script_class_icons={
+"BaseLevel": "",
 "Player": ""
 }
 
@@ -23,6 +29,10 @@ _global_script_class_icons={
 config/name="GG Quest"
 run/main_scene="res://scenes/levels/menu_level.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameState="*res://scripts/game_state.gd"
 
 [display]
 

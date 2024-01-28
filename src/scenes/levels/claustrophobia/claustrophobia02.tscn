@@ -9,7 +9,8 @@ tile_data = PoolIntArray( -458753, 5, 0, -524288, 5, 0, -524287, 5, 0, -524286, 
 
 [node name="LevelTrigger" parent="." index="4"]
 position = Vector2( 271, -209 )
-next_level_scene_path = "res://scenes/levels/level03.tscn"
+next_level_scene_path = "res://scenes/levels/claustrophobia/claustrophobia03.tscn"
 
 [node name="LevelNameLabel" parent="." index="7"]
+text = "Catacombs 2"
 level_name = "Catacombs 2"
