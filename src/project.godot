@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GG Quest"
-run/main_scene="res://scenes/levels/subway/subway01.tscn"
+run/main_scene="res://scenes/levels/menu_level.tscn"
 config/icon="res://icon.png"
 
 [display]
