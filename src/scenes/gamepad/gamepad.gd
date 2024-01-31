@@ -41,10 +41,12 @@ func _process(_delta):
 				print("press")
 				pressed_actions[action] = true
 				Input.action_press(action)
-				node.color = Color(1, 1, 1, 1)
+				if "color" in node:
+					node.color = Color(1, 1, 1, 1)
 		else:
 			if action_pressed:
 				print("release")
 				pressed_actions[action] = false
-				node.color = Color(1, 1, 1, 0.5)
+				if "color" in node:
+					node.color = Color(1, 1, 1, 0.5)
 				Input.action_release(action)
