@@ -33,8 +33,6 @@ margin_left = -188.0
 margin_top = -120.0
 margin_right = -94.0
 margin_bottom = -106.0
-text = "Select episode"
-level_name = "Select episode"
 
 [node name="NameSubway" parent="." index="8" instance=ExtResource( 4 )]
 margin_left = -51.0
@@ -52,13 +50,13 @@ margin_bottom = -106.0
 text = "Monochrome"
 level_name = "Monochrome"
 
-[node name="NameOther" parent="." index="10" instance=ExtResource( 4 )]
-margin_left = 207.0
+[node name="NameClaustrophobia" parent="." index="10" instance=ExtResource( 4 )]
+margin_left = 194.0
 margin_top = -120.0
-margin_right = 281.0
+margin_right = 289.0
 margin_bottom = -106.0
-text = "Other"
-level_name = "Other"
+text = "Claustrophobia"
+level_name = "Claustrophobia"
 
 [node name="LevelTriggerMonochrome" parent="." index="11" instance=ExtResource( 5 )]
 position = Vector2( 114, -209 )
@@ -66,4 +64,4 @@ next_level_scene_path = "res://scenes/levels/monochrome/monochrome01.tscn"
 
 [node name="LevelTriggerOther" parent="." index="12" instance=ExtResource( 5 )]
 position = Vector2( 242, -209 )
-next_level_scene_path = "res://scenes/levels/level01.tscn"
+next_level_scene_path = "res://scenes/levels/claustrophobia/claustrophobia01.tscn"
