@@ -1,6 +1,6 @@
 extends Area2D
 
-signal save
+signal save(position)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,4 +10,4 @@ func _on_Checkpoint_body_entered(body):
 	# If body belongs to the "Player" group
 	if body.is_in_group("Player"):
 		$AnimationPlayer.play("rotate")
-		emit_signal("save")
+		emit_signal("save", position)

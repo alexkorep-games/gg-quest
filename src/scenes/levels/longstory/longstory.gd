@@ -6,23 +6,16 @@ var has_been_saved = false
 func _ready():
 	load_game()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Checkpoint_save():
+func _on_Checkpoint_save(position):
 	has_been_saved = true
-	save_game()
+	save_game(position)
 
-func save_game():
-	var player = get_node("%Player")
+func save_game(position):
 	var game_state = {
 		"player": {
 			"position": {
-				"x": player.position.x,
-				"y": player.position.y
+				"x": position.x,
+				"y": position.y
 			}
 		}
 	}
@@ -41,10 +34,9 @@ func load_game():
 		var player = get_node("%Player")
 		var x = game_state["player"]["position"]["x"]
 		var y = game_state["player"]["position"]["y"]
-		print("x: ", x)
-		print("y: ", y)
 		player.position.x = int(x)
 		player.position.y = int(y)
+		player.velocity = Vector2(0, 0)
 		print("Loaded game state")
 	else:
 		print("No savegame found")
