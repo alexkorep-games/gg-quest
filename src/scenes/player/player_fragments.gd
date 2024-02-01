@@ -1,5 +1,7 @@
 extends Node2D
 
+signal animation_finished
+
 func _ready():
 	var fragments = get_node("%Fragments")
 	for child in fragments.get_children():
@@ -11,4 +13,4 @@ func _ready():
 
 func _on_Timer_timeout():
 	queue_free()
-	get_tree().reload_current_scene()
+	emit_signal("animation_finished")
