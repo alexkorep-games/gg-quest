@@ -31,13 +31,14 @@ func load_game():
 		file.open("user://savegame.save", File.READ)
 		var game_state = parse_json(file.get_as_text())
 		file.close()
-		var player = get_node("%Player")
-		var x = game_state["player"]["position"]["x"]
-		var y = game_state["player"]["position"]["y"]
-		player.position.x = int(x)
-		player.position.y = int(y)
-		player.velocity = Vector2(0, 0)
-		print("Loaded game state")
+		if game_state and "player" in game_state:
+			var player = get_node("%Player")
+			var x = game_state["player"]["position"]["x"]
+			var y = game_state["player"]["position"]["y"]
+			player.position.x = int(x)
+			player.position.y = int(y)
+			player.velocity = Vector2(0, 0)
+			print("Loaded game state")
 	else:
 		print("No savegame found")
 
@@ -46,3 +47,12 @@ func _on_Player_destroyed():
 		load_game()
 	else:
 		get_tree().reload_current_scene()
+
+
+func _on_MenuButton_new_game():
+	# Delete savegame
+	var file = File.new()
+	if file.file_exists("user://savegame.save"):
+		file.open("user://savegame.save", File.WRITE)
+		file.close()
+	get_tree().reload_current_scene()
