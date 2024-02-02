@@ -1,4 +1,4 @@
-extends BaseLevel
+extends Node2D
 
 var has_been_saved = false
 
@@ -48,8 +48,7 @@ func _on_Player_destroyed():
 	else:
 		get_tree().reload_current_scene()
 
-
-func _on_MenuButton_new_game():
+func _on_NewGameButton_pressed():
 	# Delete savegame
 	var file = File.new()
 	if file.file_exists("user://savegame.save"):

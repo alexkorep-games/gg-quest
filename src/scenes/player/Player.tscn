@@ -86,10 +86,6 @@ polygon = PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 )
 anims/Jump = SubResource( 3 )
 anims/Land = SubResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
-
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 3 )
 texture_scale = 0.3

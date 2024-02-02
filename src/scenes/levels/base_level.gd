@@ -1,11 +1,10 @@
 extends Node2D
 class_name BaseLevel
-tool
 
-export var level_code := ""
-export var level_name := ""
+export(String, FILE, "*.tscn") var level_left
+export(String, FILE, "*.tscn") var level_right
+export(String, FILE, "*.tscn") var level_top
+export(String, FILE, "*.tscn") var level_bottom
 
 func _process(_delta):
-	var level_name_label = get_node("%LevelNameLabel")
-	if level_name_label:
-		level_name_label.level_name = level_name
+	pass

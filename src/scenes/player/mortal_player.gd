@@ -41,6 +41,6 @@ func on_destroyed():
 func _physics_process(_delta):
 	for i in range(get_slide_count()):
 		var collision = get_slide_collision(i)
-		if collision.collider.is_in_group("danger"):
+		if collision.collider and collision.collider.is_in_group("danger"):
 			destroy()
 			break

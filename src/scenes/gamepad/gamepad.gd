@@ -3,8 +3,6 @@ extends Control
 var touches = {}
 var pressed_actions = {
 	"jump": false,
-	"ui_left": false,
-	"ui_right": false
 }
 
 func _unhandled_input(event):
@@ -29,8 +27,6 @@ func has_control_touches(control):
 func _process(_delta):
 	var controls = {
 		"%Jump": "jump",
-		"%Left": "ui_left",
-		"%Right": "ui_right"
 	}
 	for control in controls:
 		var action = controls[control]
@@ -38,14 +34,12 @@ func _process(_delta):
 		var action_pressed = pressed_actions[action]
 		if has_control_touches(node):
 			if not action_pressed:
-				print("press")
 				pressed_actions[action] = true
 				Input.action_press(action)
 				if "color" in node:
 					node.color = Color(1, 1, 1, 1)
 		else:
 			if action_pressed:
-				print("release")
 				pressed_actions[action] = false
 				if "color" in node:
 					node.color = Color(1, 1, 1, 0.5)

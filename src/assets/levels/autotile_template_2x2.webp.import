@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave.png-d92888fb50b625ee1812000e5948e02c.stex"
+path="res://.import/autotile_template_2x2.webp-aee774998d54718daf20183027e64b8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/longstory/assets/cave.png"
-dest_files=[ "res://.import/cave.png-d92888fb50b625ee1812000e5948e02c.stex" ]
+source_file="res://assets/levels/autotile_template_2x2.webp"
+dest_files=[ "res://.import/autotile_template_2x2.webp-aee774998d54718daf20183027e64b8e.stex" ]
 
 [params]
 

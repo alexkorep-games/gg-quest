@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/rooms_grid/rooms_grid.gd" type="Script" id=1]
+
+[node name="RoomsGrid" type="Node2D"]
+script = ExtResource( 1 )
+grid_color = Color( 0.75, 0.75, 0.75, 0.5 )
+grid_width = 1000
+grid_height = 1000
