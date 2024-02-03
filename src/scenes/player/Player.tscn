@@ -90,3 +90,8 @@ anims/Land = SubResource( 4 )
 texture = ExtResource( 3 )
 texture_scale = 0.3
 shadow_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+smoothing_speed = 20.0
