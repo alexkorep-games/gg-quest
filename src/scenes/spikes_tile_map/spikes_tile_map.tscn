@@ -224,6 +224,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="SpikesTileMap" type="TileMap" groups=["danger"]]
 tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
+centered_textures = true
 format = 1
 tile_data = PoolIntArray( 12059166, 0, 0, 12059167, 0, 0, 12059168, 0, 0, 12059169, 0, 0, 12059170, 0, 0 )
 script = ExtResource( 2 )

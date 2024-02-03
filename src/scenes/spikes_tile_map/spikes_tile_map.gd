@@ -19,6 +19,7 @@ var loop_tile_ids = {
 var gun_tile_ids = [8]
 
 func _on_Timer_timeout():
+	pass
 	for tile in get_used_cells():
 		var tile_id = get_cellv(tile)
 		if tile_id in loop_tile_ids:
