@@ -2,6 +2,10 @@ extends Node
 
 var coins = 0
 var checkpoint_player_position = Vector2(0, 0)	
+var collected_coins = []
+
+func _ready():
+	load_game()
 
 func save_game():
 	var game_state = {
@@ -9,7 +13,8 @@ func save_game():
 		"checkpoint_player_position": {
 			"x": checkpoint_player_position.x,
 			"y": checkpoint_player_position.y
-		}
+		},
+		"collected_coins": collected_coins
 	}
 	var save_file = File.new()
 	save_file.open("user://save_game.save", File.WRITE)
@@ -27,7 +32,7 @@ func load_game():
 			coins = result["coins"]
 			var pos = result["checkpoint_player_position"]
 			checkpoint_player_position = Vector2(pos.x, pos.y)
-
+			collected_coins = result["collected_coins"]
 
 func new_game():
 	coins = 0
@@ -39,9 +44,13 @@ func new_game():
 func get_coins():
 	return coins
 
-func collect_coin():
+func collect_coin(idx):
 	coins += 1
+	collected_coins.append(idx)
 	save_game()
+
+func is_coin_collected(idx):
+	return idx in collected_coins
 
 func set_checkpoint_player_position(position):
 	checkpoint_player_position = position

@@ -27,6 +27,20 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "coins01.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
 [node name="MainScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -58,7 +72,7 @@ tile_data = PoolIntArray( 2162791, 8, 0, 3145780, 0, 0, 3145781, 1, 0, 3145782, 
 [node name="CoinsTileMap" parent="LevelContainer" instance=ExtResource( 6 )]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
-tile_data = PoolIntArray( 851988, 0, 0, 917506, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0, 1441800, 0, 0, 1900592, 0, 0, 1900593, 0, 0, 1900594, 0, 0, 1900595, 0, 0, 1900596, 0, 0, 1900597, 0, 0, 1900598, 0, 0, 1900599, 0, 0, 1900600, 0, 0, 2162744, 0, 0, 2162745, 0, 0, 2162746, 0, 0, 2162747, 0, 0, 2162748, 0, 0, 2162749, 0, 0, 2162750, 0, 0, 2162751, 0, 0, 2162752, 0, 0, 2162753, 0, 0, 2162754, 0, 0, 2162755, 0, 0, 2162756, 0, 0, 2162757, 0, 0, 2162758, 0, 0, 2162759, 0, 0 )
+tile_data = PoolIntArray( 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0, 1441800, 0, 0 )
 
 [node name="Checkpoints" type="Node2D" parent="."]
 

@@ -1,9 +1,9 @@
 extends Area2D
 
-signal collected(tile)
+signal collected(idx)
 
 var fading_out = false	
-export var tile := Vector2(0, 0)
+export var idx := 0
 
 func _on_Coin_body_entered(body):
 	if fading_out:
@@ -15,5 +15,5 @@ func _on_Coin_body_entered(body):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "collect":
-		emit_signal("collected", tile)
+		emit_signal("collected", idx)
 		queue_free()

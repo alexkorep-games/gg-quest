@@ -6,9 +6,8 @@ var has_been_saved = false
 func _ready():
 	# Initial player position, if no save games are present
 	var player = get_node("%Player")
-	# Set directly in the GameState to avoid owerwriting the save file
-	GameState.checkpoint_player_position = player.position
-	load_game()
+	if GameState.checkpoint_player_position != Vector2(0, 0):
+		player.position = GameState.checkpoint_player_position
 
 func _on_Checkpoint_save(position):
 	has_been_saved = true
