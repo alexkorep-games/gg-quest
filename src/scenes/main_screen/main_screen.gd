@@ -4,8 +4,10 @@ var has_been_saved = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("%RoomsGrid").hide()
 	# Initial player position, if no save games are present
 	var player = get_node("%Player")
+	
 	if GameState.checkpoint_player_position != Vector2(0, 0):
 		player.position = GameState.checkpoint_player_position
 
